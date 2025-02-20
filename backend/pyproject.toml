@@ -1,0 +1,12 @@
+[project]
+name = "flask-react-app"
+version = "0.1.0"
+dependencies = [
+    "flask",
+    "flask-cors",
+    "gunicorn"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
