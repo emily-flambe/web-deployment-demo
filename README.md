@@ -1,6 +1,8 @@
 # web-deployment-demo
 
-This is a demo project for deploying a web application using Docker and Docker Compose. It is a simple Flask application with a React frontend that just says "Hello, World!". It is containerized with Docker in a multi-stage build to ensure cross-architecture compatibility so that you can run it on an AWS EC2 instance.
+This is a demo project for deploying a web application using Docker and Docker Compose. It is a simple Flask application with one endpoint, '/api/hello', that says "Hello, World!". It is containerized with Docker in a multi-stage build to ensure cross-architecture compatibility so that you can run it on an AWS EC2 instance.
+
+For demonstration purposes, this application includes only a backend with no frontend. This keeps the build process simple and the application lightweight, as the intended purpose of this demo is to show how to deploy a containerized web application to the internet on an AWS EC2 instance. Implementation of a frontend interface (e.g., a React app) is trivial and left as an exercise for the reader.
 
 ## Usage
 
@@ -8,15 +10,15 @@ To pull the image and run the application on your remote server, you can use the
 
 ```bash
 docker pull emilycogsdill/web-deployment-demo-app:latest
-docker run -d -p 3000:3000 emilycogsdill/flask-react-app
+docker run -d -p 5000:5000 emilycogsdill/web-deployment-demo-app:latest
 ```
 
-If you are running this on your machine, you should be able to access the frontend at http://localhost:3000. If you are running on a remote instance, you can confirm it is running by opening a new shell session and running:
+If you are running this on your machine, you should be able to access the API at http://localhost:5000/api/hello. If you are running on a remote instance, you can confirm it is running by opening a new shell session and running:
 
 ```bash
-curl -X GET http://localhost:3000
+curl -X GET http://localhost:5000/api/hello
 ```
-If the response is a bunch of html, then the application is running on the correct architecture. 💁‍♀️
+If the response is `{"message":"Hello, World!"}`, then the application is running successfully. 💁‍♀️
 
 ## Access the application
 
