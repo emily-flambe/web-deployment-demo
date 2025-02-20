@@ -4,6 +4,8 @@ This is a demo project for deploying a web application using Docker and Docker C
 
 For demonstration purposes, this application includes only a backend with no frontend. This keeps the build process simple and the application lightweight, as the intended purpose of this demo is to show how to deploy a containerized web application to the internet on an AWS EC2 instance. Implementation of a frontend interface (e.g., a React app) is trivial and left as an exercise for the reader.
 
+This demo, unimpressive as it is, is live on the public internet at https://demo-web-app.emilyflam.be, wherein is contained but a single API endpoint: https://demo-web-app.emilyflam.be/api/hello.
+
 ## Usage
 
 To pull the image and run the application on your remote server, you can use the following command:
