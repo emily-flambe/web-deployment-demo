@@ -18,10 +18,6 @@ curl -X GET http://localhost:3000
 ```
 If the response is a bunch of html, then the application is running on the correct architecture. 💁‍♀️
 
-## Access the application
-
-Open your browser and navigate to `http://localhost:5000` to see the web application in action.
-
 # Containerizing with Docker
 
 ## Multi-Stage Build for Cross-Architecture Compatibility 🚀
